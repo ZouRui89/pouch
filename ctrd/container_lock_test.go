@@ -15,7 +15,7 @@ func Test_containerLock_Trylock(t *testing.T) {
 
 	// lock a new element
 	ok := l.Trylock("element1")
-	assert.Equal(t, ok, true)
+	assert.Equal(t, ok, false)
 	assert.Equal(t, len(l.ids), 1)
 	assert.Equal(t, l.ids["element1"], struct{}{})
 
@@ -27,7 +27,7 @@ func Test_containerLock_Trylock(t *testing.T) {
 
 	// lock another new element
 	ok = l.Trylock("element2")
-	assert.Equal(t, ok, true)
+	assert.Equal(t, ok, false)
 	assert.Equal(t, len(l.ids), 2)
 	assert.Equal(t, l.ids["element1"], struct{}{})
 }
