@@ -29,7 +29,7 @@ func RunCriService(daemonconfig *config.Config, containerMgr mgr.ContainerMgr, i
 	switch daemonconfig.CriConfig.CriVersion {
 	case "v1alpha1":
 		err = runv1alpha1(daemonconfig, containerMgr, imageMgr, readyCh)
-	case "v1alpha2":
+	case "v1alpha":
 		err = runv1alpha2(daemonconfig, containerMgr, imageMgr, readyCh)
 	default:
 		readyCh <- false
