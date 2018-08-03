@@ -26,7 +26,7 @@ func (suite *APIContainerAttachSuite) SetUpTest(c *check.C) {
 // TestContainerAttachStdin tests attaching stdin is OK.
 func (suite *APIContainerAttachSuite) TestContainerAttachStdin(c *check.C) {
 	// TODO
-	// path := "/containers/{name:.*}/attach"
+	// path = "/containers/{name:.*}/attach"
 }
 
 // TestContainerAttachNotFound
